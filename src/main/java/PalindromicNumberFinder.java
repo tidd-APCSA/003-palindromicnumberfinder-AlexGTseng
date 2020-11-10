@@ -13,9 +13,10 @@ public class PalindromicNumberFinder {
 
     // this method should find the next palindromic number
     public int searchForPalindromicNum(int num){
+      int initial = num;
         while(true) {
           if(Integer.parseInt(reverseNum(num)) == num) {
-            return num;
+            return (num) - initial;
           } else {
             num++;
           }
