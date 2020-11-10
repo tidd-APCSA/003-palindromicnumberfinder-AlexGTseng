@@ -14,12 +14,21 @@ public class PalindromicNumberFinder {
     // this method should find the next palindromic number
     public int searchForPalindromicNum(int num){
       int initial = num;
+      int counter = 0;
         while(true) {
-          if(Integer.parseInt(reverseNum(num)) == num) {
-            return (num) - initial;
-          } else {
+          if((Integer.parseInt(reverseNum(num)) != num) || counter == 0)  {
             num++;
+            counter++;
+          } else {
+            return num - initial;
           }
+
+
+          // if(Integer.parseInt(reverseNum(num)) == num) {
+          //   return (num) - initial;
+          // } else {
+          //   num++;
+          // }
         }
     }
 
