@@ -17,7 +17,6 @@ public class PalindromicNumberFinder {
           if(Integer.parseInt(reverseNum(num)) == num) {
             return num;
           } else {
-            System.out.println(num);
             num++;
           }
         }
@@ -54,10 +53,11 @@ public class PalindromicNumberFinder {
       // return reversed;
 
       String reversed = "";
-      for(int i = s.length() - 1; i >= 0; i--) {
-        reversed = reversed + s.charAt(i);
+      String number = String.valueOf(num);
+      for(int i = number.length() - 1; i >= 0; i--) {
+        reversed = reversed + number.charAt(i);
       } 
-      return String.valueOf(reversed);
+      return reversed;
     }
 
 
